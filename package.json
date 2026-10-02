@@ -1,0 +1,12 @@
+{
+  "name": "passoff",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --parallel --filter cms --filter web dev",
+    "dev:cms": "pnpm --filter cms dev",
+    "dev:web": "pnpm --filter web dev",
+    "build": "pnpm --filter cms build && pnpm --filter web build",
+    "seed": "pnpm --filter cms seed:example"
+  },
+  "packageManager": "pnpm@12.3.4"
+}

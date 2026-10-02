@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page",
+    "description": "Страницы сайта. Страница со slug \"home\" — главная"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "menuOrder": {
+      "type": "integer",
+      "description": "Позиция в меню. Пусто — страницы нет в меню"
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": ["shared.rich-text", "shared.quote", "shared.media", "shared.slider"]
+    }
+  }
+}
